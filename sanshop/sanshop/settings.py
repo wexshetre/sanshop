@@ -179,20 +179,38 @@ WSGI_APPLICATION = 'sanshop.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         # 'ENGINE': 'django.db.backends.sqlite3',
+#         # 'NAME': BASE_DIR / 'db.sqlite3',
+#         # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'ENGINE': 'django.contrib.gis.db.backends.postgis',
+#         'NAME': 'somedb',
+#         'USER': 'rjydhd',
+#         'PASSWORD': 'nstumxghnrynryd',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#         'ATOMIC_REQUESTS': True,
+#     }
+# }
+
+
+#db for heroku
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': BASE_DIR / 'db.sqlite3',
-        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'somedb',
-        'USER': 'rjydhd',
-        'PASSWORD': 'nstumxghnrynryd',
-        'HOST': 'localhost',
+        'NAME': 'd909jbam1rln40',
+        'USER': 'wqjxkjqgtbhruv',
+        'PASSWORD': '99b7d774efc36530919cfb3c42024e2be3b8e57cac4177e8dc9bbe3a6f0a1e27',
+        'HOST': 'ec2-54-145-249-177.compute-1.amazonaws.com',
         'PORT': '5432',
+        # 'URI': 'postgres://wqjxkjqgtbhruv:99b7d774efc36530919cfb3c42024e2be3b8e57cac4177e8dc9bbe3a6f0a1e27@ec2-54-145-249-177.compute-1.amazonaws.com:5432/d909jbam1rln40',
         'ATOMIC_REQUESTS': True,
+        # 'Heroku CLI': 'heroku pg:psql postgresql-flexible-59680 --app sanshop',
     }
 }
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators

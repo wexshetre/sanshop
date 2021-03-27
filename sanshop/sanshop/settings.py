@@ -14,6 +14,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Path helper
 location = lambda x: os.path.join(os.path.dirname(os.path.realpath(__file__)), x)
 
+# print('location', location) #location <function <lambda> at 0x7f110449ccb0>
+# print('base', BASE_DIR) #base /media/trule/DATA/rekupek/kar/SAIT/ecommerce/hrktst/eweljar/ss/sanshop
+
+
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -247,11 +252,12 @@ LANGUAGES = (
 MEDIA_ROOT = location("public/media")
 MEDIA_URL = '/media/'
 
-STATIC_URL = '/static/'
-STATIC_ROOT = location('public/static')
+STATIC_URL = '/static/' #os.path.join(BASE_DIR, 'templates'),
+# STATIC_URL = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = location('public/static') #collects static
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_DIRS = (
-    location('static/'),
+    os.path.join(BASE_DIR, 'static'),
 )
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',

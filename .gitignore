@@ -134,6 +134,7 @@ dmypy.json
 
 # pytype static type analyzer
 .pytype/
-
+sanshop/static/oscar/img/
+sanshop/static/oscar/js/
 # Cython debug symbols
 cython_debug/

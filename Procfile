@@ -1,1 +1,1 @@
-web: gunicorn sanshop.wsgi
+web: gunicorn --pythonpath sanshop sanshop.wsgi 

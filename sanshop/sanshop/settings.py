@@ -4,6 +4,9 @@ from pathlib import Path
 from oscar.defaults import *
 import oscar
 
+import django_heroku
+django_heroku.settings(locals())
+
 # for language setting
 from django.utils.translation import gettext_lazy as _
 from django.conf import global_settings
